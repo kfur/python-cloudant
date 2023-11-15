@@ -40,8 +40,8 @@ class Replay429Adapter(HTTPAdapter):
             connect=0,
             read=0,
             # Allow retries for all the CouchDB HTTP method types
-            method_whitelist=frozenset(['GET', 'HEAD', 'PUT', 'POST',
-                                        'DELETE', 'COPY']),
+            # method_whitelist=frozenset(['GET', 'HEAD', 'PUT', 'POST',
+            #                             'DELETE', 'COPY']),
             # Only retry for a 429 too many requests status code
             status_forcelist=[429],
             # Configure the start value of the doubling backoff
